@@ -1,0 +1,22 @@
+{
+  "name": "kad-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "createdb": "dat create db"
+  },
+  "author": "Santiago Su",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "dat": "^13.9.2",
+    "kad": "^2.4.1",
+    "leveldown": "^2.1.1",
+    "levelup": "^2.0.1"
+  }
+}
