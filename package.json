@@ -13,9 +13,10 @@
     "babel-preset-es2015": "^6.24.1"
   },
   "dependencies": {
+    "@kadenceproject/kadence": "^3.0.0",
     "bunyan": "^1.8.12",
     "dat": "^13.9.2",
-    "kad": "^2.4.1",
+    "encoding-down": "^4.0.0",
     "leveldown": "^2.1.1",
     "levelup": "^2.0.1"
   }
