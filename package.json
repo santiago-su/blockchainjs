@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "createdb": "dat create db"
-  },
+  "scripts": {},
   "author": "Santiago Su",
   "license": "ISC",
   "devDependencies": {
@@ -15,7 +13,7 @@
   "dependencies": {
     "@kadenceproject/kadence": "^3.0.0",
     "bunyan": "^1.8.12",
-    "dat": "^13.9.2",
+    "commander": "^2.14.1",
     "encoding-down": "^4.0.0",
     "leveldown": "^2.1.1",
     "levelup": "^2.0.1"
