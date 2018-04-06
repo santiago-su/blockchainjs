@@ -1,4 +1,3 @@
-First `npm install`
-Then `npm run createdb`
+First run `yarn`
 
-Then run `node node-net.js`
+Then run `node src/network-layer.js`
