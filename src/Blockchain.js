@@ -22,15 +22,16 @@ class Blockchain {
     return i >= this.difficulty;
   }
 
-  calculateHashForBlock(block) {
-    return calculateHash(...block);
-  }
-
   calculateHash(index, previousHash, timestamp, data, nonce) {
     return crypto
       .createHash('sha256')
       .update(index + previousHash + timestamp + data + nonce)
       .digest('hex');
+  }
+
+  calculateHashForBlock(block) {
+    const {index, previousHash, timestamp, data, nonce} = block;
+    return this.calculateHash(index, previousHash, timestamp, data, nonce);
   }
 
   mine(data) {
@@ -80,12 +81,12 @@ class Blockchain {
   }
 
   addBlock(newBlock) {
-    validNextBlock(newBlock, this.latestBlock)
-      ? BLOCKCHAIN.chain.push(newBlock)
+    this.isValidNextBlock(newBlock, this.latestBlock)
+      ? this.blockchain.push(newBlock)
       : console.log('Invalid block');
   }
 
-  validNextBlock(nextBlock, previousBlock) {
+  isValidNextBlock(nextBlock, previousBlock) {
     const nextBlockHash = this.calculateHashForBlock(nextBlock);
     if (previousBlock.index + 1 !== nextBlock.index) {
       return false;
