@@ -39,11 +39,11 @@ genesisNode.use('BROADCAST_BLOCKCHAIN', (req, res, next) => {
   res.send(bchain.get);
 })
 
-  genesisNode.use('RECEIVE_BLOCKCHAIN', (req, res, next) => {
-    let incomingMessage = req.params;
-    bchain.replaceChain(...incomingMessage);
-    // broadcast blockchain
-  })
+genesisNode.use('RECEIVE_BLOCKCHAIN', (req, res, next) => {
+  let incomingMessage = req.params;
+  bchain.replaceChain(...incomingMessage);
+  // broadcast blockchain
+})
 
 genesisNode.use('RECEIVE_LATEST_BLOCK', (req, res, next) => {
   logger.info('==================Receiving latest block===================');
